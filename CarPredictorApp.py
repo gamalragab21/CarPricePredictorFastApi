@@ -44,7 +44,6 @@ app = FastAPI()
 @app.post("/predict")
 async def predict_car_price(car: Car):
     try:
-        8/0
         # Convert input data to DataFrame
         df_request = pd.DataFrame([car.dict()])
 
