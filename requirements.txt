@@ -1,7 +1,7 @@
-fastapi==0.95.2
-joblib==1.2.0
-pandas==2.0.0
-pydantic==1.10.8
-numpy==1.23.0
+fastapi
+joblib
+pandas
+pydantic
+numpy
 xgboost
 gunicorn
