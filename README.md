@@ -41,6 +41,23 @@ To run the notebook locally, you can follow these steps:
 3. Open the notebook file, 'car_price_prediction.ipynb', using Jupyter Notebook or JupyterLab.
 
 4. Execute the cells in sequential order to reproduce the exploratory data analysis and predictions.
+5. Start the FastAPI application by running python CarPredictorApp.py.
+
+6 Send a POST request to https://car-price-prediction-e99b.onrender.com/predict with a JSON payload containing a car object. Example:
+
+bash
+Copy code
+curl -X POST -H "Content-Type: application/json" -d '{
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2018,
+    "mileage": 50000,
+    "fuel_type": "Gasoline",
+    "transmission": "Automatic",
+    "num_owners": 2,
+    "condition": "Used"
+}' https://car-price-prediction-e99b.onrender.com/predict
+The response will include the predicted price of the car.
 
 Feel free to explore the notebook, dive into the EDA section, and experiment with different models or techniques to further improve the accuracy of car price prediction.
 
