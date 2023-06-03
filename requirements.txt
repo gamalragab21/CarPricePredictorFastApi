@@ -5,4 +5,5 @@ pydantic
 numpy
 xgboost
 gunicorn
+scikit-learn
 uvicorn
