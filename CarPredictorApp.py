@@ -44,6 +44,7 @@ app = FastAPI()
 @app.post("/predict")
 async def predict_car_price(car: Car):
     try:
+        8/0
         # Convert input data to DataFrame
         df_request = pd.DataFrame([car.dict()])
 
@@ -57,7 +58,8 @@ async def predict_car_price(car: Car):
         return {'message': 'Prediction successful', 'status': 200, "prediction": rounded_price}
 
     except Exception as e:
-        return {"message": f'Please review your request body, maybe it contains invalid data: {e}'}
+        print(e.with_traceback)
+        return {"message": f'Please review your request body, maybe it contains invalid data: {str(e)}'}
 
 # Root endpoint
 @app.get('/')
