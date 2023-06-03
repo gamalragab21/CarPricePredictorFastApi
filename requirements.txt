@@ -6,4 +6,6 @@ numpy
 xgboost
 gunicorn
 scikit-learn
+sklearn_features
+category_encoders
 uvicorn
