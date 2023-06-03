@@ -2,7 +2,6 @@
 from fastapi import FastAPI
 import joblib
 import pandas as pd
-
 # Define the input data model using BaseModel
 from pydantic import BaseModel
 

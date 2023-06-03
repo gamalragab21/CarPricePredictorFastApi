@@ -5,3 +5,4 @@ pydantic==1.10.8
 numpy==1.23.0
 xgboost==1.6.1
 gunicorn
+uvicorn
