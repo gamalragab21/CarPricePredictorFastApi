@@ -97,7 +97,7 @@ The trained model is deployed as a web service using FastAPI and hosted on the R
 2. Once the application is running, you can send a POST request to https://car-price-prediction-e99b.onrender.com/predict with a JSON payload containing a car object to get the predicted price.
 
 ## Contact
-For any inquiries or questions, feel free to reach out to  ## Gamal Ragab.
+For any inquiries or questions, feel free to reach out to  **Gamal Ragab**.
 
 
 
