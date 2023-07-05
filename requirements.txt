@@ -1,7 +1,7 @@
 fastapi
 joblib
 pandas
-pydantic
+pydantic==1.8.2
 numpy
 xgboost
 gunicorn
