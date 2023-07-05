@@ -1,5 +1,6 @@
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import pandas as pd
 # Define the input data model using BaseModel
@@ -37,8 +38,20 @@ class ModelLoader:
 # Create an instance of the model loader
 car_model_loader = ModelLoader('carPricePredictorModel.pkl')
 
+origins = [
+    "https://localhost:7192",
+    # Add any other allowed origins here
+]
+
 # Create a FastAPI application instance
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Endpoint to predict car price
 @app.post("/predict")
