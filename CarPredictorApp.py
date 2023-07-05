@@ -1,4 +1,5 @@
 
+import pandas
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import joblib
@@ -38,16 +39,17 @@ class ModelLoader:
 # Create an instance of the model loader
 car_model_loader = ModelLoader('carPricePredictorModel.pkl')
 
-origins = [
-    "https://localhost:7192",
-    # Add any other allowed origins here
-]
+# origins = [
+#     "https://localhost:7192",
+#     # Add any other allowed origins here
+# ]
 
 # Create a FastAPI application instance
 app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
